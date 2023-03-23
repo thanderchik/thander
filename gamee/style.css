@@ -1,0 +1,85 @@
+ body {
+    background: linear-gradient(99deg, rgb(1, 72, 159) 0%, rgb(177, 46, 2) 100%);
+    margin: 0;
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+ }
+
+ @keyframes gradient {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+ 
+ .game {
+    width: 800px;
+    height: 550px;
+    border-bottom: 2px solid #000;
+    margin: auto;
+}
+
+#dino {
+    width: 60px;
+    height: 50px;
+    background-image: url(/img/trex.png);
+    background-size: 60px 50px;
+    position: relative;
+    top: 500px;
+}
+
+#cactus {
+    width: 55px;
+    height: 40px;
+    background-image: url(/img/cactus.png);
+    background-size: 55px 40px;
+    position: relative;
+    top: 10px;
+    left: 560px;
+    animation: cactusMov 2s infinite linear;
+}
+
+ @keyframes cactusMov {
+    0% {
+        left: 580px;
+    }
+
+    100% {
+        left: 20px;
+    }
+ }
+
+ .jump {
+    animation: jump 0.5s linear;
+ }
+
+ @keyframes jump {
+    0% {
+        top: 500px;
+    }
+
+    15% {
+        top: 450px;
+    }
+
+    30% {
+        top: 425px;
+    }
+
+    50% {
+        top: 410px;
+    }
+
+    75% {
+        top: 430px;
+    }
+
+    100% {
+        top: 450px;
+    }
+ }
